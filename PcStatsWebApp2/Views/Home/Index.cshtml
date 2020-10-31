@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "PC Stats";
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">PC Stats</h1>
+    <div id="PcStatsOutput" />
+
+</div>
+
+<script>
+
+    document.addEventListener('readystatechange', event => {
+        // When window and external resources are loaded
+        if (event.target.readyState === "complete") {
+            getPcStatsAjaxEveryFiveSec();
+        }
+    });
+
+</script>
